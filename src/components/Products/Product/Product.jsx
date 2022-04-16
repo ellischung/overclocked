@@ -8,8 +8,11 @@ import {
   IconButton,
 } from "@mui/material";
 import { AddShoppingCart } from "@mui/icons-material";
+import useStyles from "./styles";
 
 const Product = ({ product }) => {
+  const classes = useStyles();
+
   return (
     <Card className={classes.root}>
       <CardMedia className={classes.media} image="" title={product.name} />
