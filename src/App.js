@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Navbar, Products } from "./components";
+import { Navbar, Products, Cart } from "./components";
 import { commerce } from "./lib/commerce";
 
 const App = () => {
@@ -32,6 +32,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Navbar totalItems={cart.total_items} />
         <Products products={products} onAddToCart={handleAddToCart} />
+        <Cart cart={cart} />
       </ThemeProvider>
     </div>
   );
