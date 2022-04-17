@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { alpha } from '@mui/material/styles';
 
 const drawerWidth = 0;
 
@@ -32,9 +33,9 @@ export default makeStyles((theme) => ({
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: "white",
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
     "&:hover": {
-      backgroundColor: "grey",
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
