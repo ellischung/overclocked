@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Navbar, Products, Cart } from "./components";
 import { commerce } from "./lib/commerce";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const theme = createTheme(); // components need to be wrapped by theme
@@ -28,13 +29,23 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <Navbar totalItems={cart.total_items} />
-        <Products products={products} onAddToCart={handleAddToCart} />
-        <Cart cart={cart} />
-      </ThemeProvider>
-    </div>
+    <Router>
+      <div>
+        <ThemeProvider theme={theme}>
+          <Navbar totalItems={cart.total_items} />
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <Products products={products} onAddToCart={handleAddToCart} />
+              }
+            />
+            <Route exact path="/cart" element={<Cart cart={cart} />} />
+          </Routes>
+        </ThemeProvider>
+      </div>
+    </Router>
   );
 };
 
