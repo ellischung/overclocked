@@ -3,25 +3,7 @@ import { Grid } from "@mui/material";
 import Product from "./Product/Product";
 import useStyles from "./styles";
 
-const products = [
-  {
-    id: 1,
-    name: "GPU",
-    description: "Nvidia RTX 3080 Founders Edition",
-    price: "$1000",
-    image:
-      "https://c1.neweggimages.com/ProductImageCompressAll1280/ARUXS211015278F9.jpg",
-  },
-  {
-    id: 2,
-    name: "CPU",
-    description: "Intel Core i9-12900k",
-    price: "$500",
-    image: "https://m.media-amazon.com/images/I/61RnzuOIOoL._AC_SS450_.jpg",
-  },
-];
-
-const Products = () => {
+const Products = ({ products }) => {
   const classes = useStyles();
 
   return (
