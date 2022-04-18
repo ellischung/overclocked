@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Navbar, Products, Cart } from "./components";
+import { Navbar, Products, Cart, Checkout } from "./components";
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -68,6 +68,7 @@ const App = () => {
                 />
               }
             />
+            <Route exact path="/checkout" element={<Checkout />} />
           </Routes>
         </ThemeProvider>
       </div>
