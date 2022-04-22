@@ -13,7 +13,17 @@ const FormInput = ({ name, label }) => {
         name={name}
         label={label}
         required
-        render={({ field }) => <TextField fullWidth label={label} required />}
+        defaultValue=""
+        render={({ field: { ref, ...field }, fieldState }) => (
+          <TextField
+            fullWidth
+            name={name}
+            {...field}
+            inputRef={ref}
+            label={label}
+            required
+          />
+        )}
       />
     </Grid>
   );
