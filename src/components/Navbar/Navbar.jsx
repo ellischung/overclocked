@@ -1,16 +1,8 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Badge,
-  MenuItem,
-  Menu,
-  Typography,
-} from "@mui/material";
+import { AppBar, Toolbar, IconButton, Badge, Typography } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/overclocked.png";
+import logo from "../../assets/overclockedlogo.png";
 import useStyles from "./styles";
 
 const Navbar = ({ totalItems }) => {
@@ -31,10 +23,9 @@ const Navbar = ({ totalItems }) => {
             <img
               src={logo}
               alt="overclocked"
-              height="25px"
+              height="45px"
               className={classes.image}
             />
-            overclocked
           </Typography>
           <div className={classes.grow} />
           {location.pathname === "/" && (
