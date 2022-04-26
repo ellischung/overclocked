@@ -15,11 +15,16 @@ const App = () => {
     typography: {
       h5: {
         fontFamily: "Roboto Mono",
-        fontWeight: "Bold",
+        fontWeight: "bold",
       },
       h6: {
-        fontWeight: "Bold",
-      }
+        fontWeight: "bold",
+      },
+      overline: {
+        fontSize: 16,
+        fontStyle: "italic",
+        textTransform: "none",
+      },
     },
   });
 

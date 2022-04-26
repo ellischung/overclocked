@@ -15,8 +15,8 @@ const Contact = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Typography variant="h5">
-          "Beating the market at PC components &amp; services" &#8212;Ellis
+        <Typography variant="overline">
+          "Beating the market at PC components &amp; tech services" &#8212;Ellis
           Chung
         </Typography>
         <div className={classes.grow} />
@@ -32,6 +32,8 @@ const Contact = () => {
             <PhoneIcon sx={{ mr: 2 }} />
             <Typography variant="subtitle1">1-(917)-459-2640</Typography>
           </div>
+          <br />
+          <Typography variant="subtitle2">&copy; Overclocked 2022</Typography>
         </Grid>
       </Grid>
     </div>

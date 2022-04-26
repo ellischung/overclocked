@@ -4,6 +4,7 @@ export default makeStyles(() => ({
   body: {
     background: "#D3D3D3",
     padding: "20px",
+    position: "relative",
     left: 0,
     bottom: 0,
     right: 0,
