@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Navbar, Products, Cart, Checkout } from "./components";
+import { Navbar, Products, Cart, Checkout, Contact } from "./components";
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
 const App = () => {
   const theme = createTheme(); // components need to be wrapped by theme
@@ -101,6 +102,7 @@ const App = () => {
               }
             />
           </Routes>
+          <Contact />
         </ThemeProvider>
       </div>
     </Router>
