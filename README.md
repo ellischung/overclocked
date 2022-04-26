@@ -1,8 +1,8 @@
 # Overclocked
 
-## An e-commerce web application for pc components & services
+### An e-commerce web application for pc components & services
 
-## Built with:
+### Built with:
 
 - React.js
 - Commerce.js
