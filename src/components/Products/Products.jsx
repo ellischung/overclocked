@@ -31,7 +31,9 @@ const Products = ({ products, onAddToCart }) => {
       <Carousel responsive={responsive} infinite={true} autoPlay={true}>
         {products.map((product) => (
           <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
-            <Product product={product} onAddToCart={onAddToCart} />
+            <div className={classes.spacing}>
+              <Product product={product} onAddToCart={onAddToCart} />
+            </div>
           </Grid>
         ))}
       </Carousel>
