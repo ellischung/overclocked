@@ -15,29 +15,22 @@ const Contact = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Typography
-          variant="h6"
-          style={{
-            fontFamily: "Roboto Mono",
-            fontWeight: "bold",
-            fontStyle: "italic",
-          }}
-        >
-          "Our mission statement is to sell PC components &amp; services at
-          unmatched prices" -Ellis Chung
+        <Typography variant="h5">
+          "Beating the market at PC components &amp; services" &#8212;Ellis
+          Chung
         </Typography>
         <div className={classes.grow} />
         <Grid>
-          <Typography variant="h5">Contact Us</Typography>
+          <Typography variant="h6">Contact Us</Typography>
           <Divider />
           <br />
           <div className={classes.contact}>
             <EmailIcon sx={{ mr: 2 }} />
-            <Typography variant="h6">overclockedus@gmail.com</Typography>
+            <Typography variant="subtitle1">overclockedus@gmail.com</Typography>
           </div>
           <div className={classes.contact}>
             <PhoneIcon sx={{ mr: 2 }} />
-            <Typography variant="h6">1-(917)-459-2640</Typography>
+            <Typography variant="subtitle1">1-(917)-459-2640</Typography>
           </div>
         </Grid>
       </Grid>

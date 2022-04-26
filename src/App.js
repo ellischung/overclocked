@@ -6,11 +6,22 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 const App = () => {
-  const theme = createTheme(); // components need to be wrapped by theme
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
+
+  const theme = createTheme({
+    typography: {
+      h5: {
+        fontFamily: "Roboto Mono",
+        fontWeight: "Bold",
+      },
+      h6: {
+        fontWeight: "Bold",
+      }
+    },
+  });
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
