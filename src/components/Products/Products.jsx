@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Grid, CssBaseline } from "@mui/material";
 import Product from "./Product/Product";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -26,18 +26,21 @@ const Products = ({ products, onAddToCart }) => {
   const classes = useStyles();
 
   return (
-    <main className={classes.content}>
-      <div className={classes.toolbar} />
-      <Carousel responsive={responsive} infinite={true} autoPlay={true}>
-        {products.map((product) => (
-          <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
-            <div className={classes.spacing}>
-              <Product product={product} onAddToCart={onAddToCart} />
-            </div>
-          </Grid>
-        ))}
-      </Carousel>
-    </main>
+    <>
+      <CssBaseline />
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+        <Carousel responsive={responsive} infinite={true} autoPlay={true}>
+          {products.map((product) => (
+            <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
+              <div className={classes.spacing}>
+                <Product product={product} onAddToCart={onAddToCart} />
+              </div>
+            </Grid>
+          ))}
+        </Carousel>
+      </main>
+    </>
   );
 };
 

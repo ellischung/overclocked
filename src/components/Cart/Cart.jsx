@@ -1,5 +1,11 @@
 import React from "react";
-import { Container, Typography, Button, Grid } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Button,
+  Grid,
+  CssBaseline,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem/CartItem";
 import useStyles from "./styles";
@@ -71,13 +77,16 @@ const Cart = ({
   if (!cart.line_items) return "Loading...";
 
   return (
-    <Container>
-      <div className={classes.toolbar} />
-      <Typography variant="h3" gutterBottom>
-        Your Shopping Cart
-      </Typography>
-      {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
-    </Container>
+    <>
+      <CssBaseline />
+      <Container>
+        <div className={classes.toolbar} />
+        <Typography variant="h3" gutterBottom>
+          Your Shopping Cart
+        </Typography>
+        {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
+      </Container>
+    </>
   );
 };
 
