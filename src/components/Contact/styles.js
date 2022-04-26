@@ -9,8 +9,12 @@ export default makeStyles(() => ({
     bottom: 0,
     right: 0,
   },
-  grow: {
-    flexGrow: 0.5,
+  text: {
+    margin: "auto",
+    marginBottom: "30px",
+  },
+  grid: {
+    margin: "auto",
   },
   contact: {
     display: "flex",

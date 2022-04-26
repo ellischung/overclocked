@@ -13,6 +13,9 @@ const App = () => {
 
   const theme = createTheme({
     typography: {
+      h3: {
+        marginTop: "5%",
+      },
       h5: {
         fontFamily: "Roboto Mono",
         fontWeight: "bold",

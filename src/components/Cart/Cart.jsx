@@ -13,18 +13,20 @@ const Cart = ({
   const classes = useStyles();
 
   const EmptyCart = () => (
-    <Typography variant="subtitle1">
-      You have no items in your shopping cart,
-      <Link to="/" className={classes.link}>
-        {" "}
-        start shopping!
-      </Link>
-    </Typography>
+    <div className={classes.emptyCart}>
+      <Typography variant="subtitle1">
+        You have no items in your shopping cart,
+        <Link to="/" className={classes.link}>
+          {" "}
+          start shopping!
+        </Link>
+      </Typography>
+    </div>
   );
 
   const FilledCart = () => (
     <>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} sx={{ my: 4 }}>
         {cart.line_items.map((item) => (
           <Grid item xs={12} sm={4} key={item.id}>
             <CartItem
@@ -71,7 +73,7 @@ const Cart = ({
   return (
     <Container>
       <div className={classes.toolbar} />
-      <Typography className={classes.title} variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom>
         Your Shopping Cart
       </Typography>
       {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}

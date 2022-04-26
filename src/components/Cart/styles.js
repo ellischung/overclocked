@@ -2,8 +2,9 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
-  title: {
+  emptyCart: {
     marginTop: "5%",
+    marginBottom: "45%",
   },
   emptyButton: {
     minWidth: "150px",
@@ -23,6 +24,7 @@ export default makeStyles((theme) => ({
   cardDetails: {
     display: "flex",
     marginTop: "10%",
+    marginBottom: "10%",
     width: "100%",
     justifyContent: "space-between",
   },

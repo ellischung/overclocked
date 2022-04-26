@@ -9,18 +9,14 @@ const Contact = () => {
 
   return (
     <div className={classes.body}>
-      <Grid
-        container
-        direction="row"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Typography variant="overline">
-          "Beating the market at PC components &amp; tech services" &#8212;Ellis
-          Chung
-        </Typography>
-        <div className={classes.grow} />
-        <Grid>
+      <Grid container direction="row">
+        <div className={classes.text}>
+          <Typography variant="overline">
+            "Beating the market at PC components &amp; tech services"
+            &#8212;Ellis Chung
+          </Typography>
+        </div>
+        <Grid className={classes.grid}>
           <Typography variant="h6">Contact Us</Typography>
           <Divider />
           <br />
