@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+  Grid,
   Paper,
   Stepper,
   Step,
@@ -92,7 +93,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
     );
 
   return (
-    <>
+    <Grid container alignItems="center" justifyContent="center">
       <CssBaseline />
       <div className={classes.toolbar} />
       <main className={classes.layout}>
@@ -114,7 +115,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
           )}
         </Paper>
       </main>
-    </>
+    </Grid>
   );
 };
 

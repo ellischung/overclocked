@@ -1,2 +1,8 @@
-/* Roboto Mono font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Mono:wght@100&display=swap');
+
+.App {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}

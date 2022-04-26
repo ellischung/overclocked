@@ -12,8 +12,8 @@ const Contact = () => {
       <Grid container direction="row">
         <div className={classes.text}>
           <Typography variant="overline">
-            "Beating the market at PC components &amp; tech services"
-            &#8212;Ellis Chung
+            "We provide gamers with only the best deals on PC components &amp;
+            tech services" &#8212;Ellis Chung
           </Typography>
         </div>
         <Grid className={classes.grid}>
