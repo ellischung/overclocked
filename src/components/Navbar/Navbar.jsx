@@ -27,7 +27,6 @@ const Navbar = ({ totalItems }) => {
               className={classes.image}
             />
           </Typography>
-          <div className={classes.grow} />
           {location.pathname === "/" && (
             <div className={classes.button}>
               <IconButton

@@ -21,7 +21,4 @@ export default makeStyles((theme) => ({
   image: {
     marginRight: "10px",
   },
-  grow: {
-    flexGrow: 1,
-  },
 }));
